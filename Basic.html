@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="header.css">
+
+
+   
+        <title>
+            YouTube.com
+        </title>
+    </head>
+    <style>
+        .search-bar{
+            flex:1;
+            width: 0;
+            
+            height:35px;
+            border-style:solid;
+            border-color:rgb(191, 187, 187);
+        }
+        .search-bar::placeholder{
+            padding-left: 10px;
+            font-size:15px;
+        }
+        head{
+            margin-bottom:0px;
+
+        }
+        .vd{
+            display:inline-block;
+            vertical-align:top;
+            margin-left:0px;
+            margin-bottom:30px;
+            margin-right:20px;
+            margin-top:0px;
+        }
+        .vd:hover{
+            cursor: pointer;
+        }
+        .thumbnail{
+            width: 325px;
+            
+            object-fit:contain;
+            margin-left:0px;
+            margin-top:0px;
+            object-position: top;
+            display:block;
+            margin-bottom:0px;
+            margin-right:0px;
+            vertical-align:top;
+        }
+        .title{
+            margin-top:0;
+            width:270px;
+            line-height: 25px;
+            color:black;
+            font-weight:bold;
+            margin-bottom:0px;
+            
+        }
+        .views{
+            margin-top:0;
+            width:315px;
+            color:rgb(101, 100, 100);
+            font-size:14px;
+            
+        }
+        .youber{
+            margin-bottom:0px;
+            margin-top:0px;
+            color:rgb(101, 100, 100);
+            font-size:14px;
+            width:315px;
+            
+        }
+        .channel{
+            display: inline;
+            width:50px;
+            border-radius:300;
+        }
+        .vi{
+            width:200px;
+            display:inline-block;
+        }
+        .pp{
+            margin-top:5px;
+            width:40px;
+            border-radius:300px;
+            vertical-align: top;
+            object-fit:contain;
+        }
+        .vdg{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+        .hanb{
+            width:30px;
+            height:30px;
+            object-fit: contain;
+            margin-left:30px;
+        }
+        .youtubelogo{
+            width:100px;
+            height:30px;
+            margin-left:40px;
+        }
+        .search-button{
+            padding-left:10px;
+            padding-right:10px;
+            height: 25px;
+            vertical-align: center;
+            
+        }
+        .mike{
+           
+            width:30px;
+            border-radius:300px;
+            height:30px;
+            
+        }
+        .sb{
+            height:40px;
+            border-style:solid;
+            border-color:rgb(191, 187, 187);
+           
+        }
+        .m{
+            border-radius:30px;
+            border:0;
+            
+            margin-left:10px;
+        }
+        .everything{
+            
+            padding-top:30px;
+            
+        }
+        .ri{
+            width:30px;
+            height: 30px;
+            
+        }
+        .propic{
+            width:30px;
+            height: 30px;
+            object-fit: contain;
+            vertical-align: center;
+        }
+        .sbi{
+            width:24px;
+            height:24px;
+            
+            vertical-align: center;
+        }
+        .sbb{
+            width:80px;
+            height: 60px;
+        }
+        .vt{
+            background-color: black;
+            color:white;
+            font-weight: 500px;
+            position:absolute;
+            left:280px;
+            right:5px;
+            top:160px;
+            bottom:6px;
+        }
+        .tb{
+            position:relative;
+            
+        }
+        .noti{
+            width:30px;
+            height: 30px;
+            margin-right:0px;
+            position:absolute;
+            right:70px;
+            
+        }
+        .nn{
+            background-color: rgb(121, 9, 9);
+            font-size:12px;
+            border-radius:500px;
+            margin-left:0px;
+            position:relative;
+            right:3px;
+            bottom:4px;
+            left:7px;
+            
+            color:white;
+            padding-left:5px;
+            padding-right:5px;
+            padding-top:2px;
+            padding-bottom:2px;
+
+        }
+        .sbl{
+            background-color: white;
+            height:76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+
+        }
+        .sbl:hover{
+            background-color: grey;
+            cursor:pointer;
+            
+        }
+        .sbl div{
+            font-size: 10px;
+            color:black;
+
+        }
+        .ri:hover{
+            cursor: pointer;
+        }
+        .noti:hover{
+            cursor: pointer;
+        }
+        .propic:hover{
+            cursor: pointer;
+        }
+        .m:hover{
+            cursor: pointer;
+        }
+        .sb:hover{
+            cursor: pointer;
+        }
+        
+    </style>
+    <div class="side-bar">
+        <div class="sbl">
+            <img class="sbi" src="channels/home.svg"/>
+            <div>Home</div>
+
+        </div>
+        <div class="sbl">
+            <img class="sbi" src="channels/explore.svg"/>
+            <div>Explore</div>
+        </div>
+        <div class="sbl">
+            <img class="sbi" src="channels/subscriptions.svg"/>
+            <div>Subscriptions</div>
+
+        </div>
+        <div class="sbl">
+            <img class="sbi" src="channels/originals.svg"/>
+            <div>
+                Originals
+            </div>
+
+    </div>
+    <div class="sbl">
+        <img class="sbi" src="channels/youtube-music.svg"/>
+        <div>YouTube Music</div>
+        </div>
+        <div class="sbl">
+            <img class="sbi" src="channels/library.svg"/>
+            <div>Library</div>
+        </div>
+
+    </div>
+
+    <body>
+        
+        <div class="header">
+            <div class="left-section">
+                <img class="hanb" src="channels/hamburger-menu.svg"/>
+                <img class="youtubelogo" src="channels/youtube-logo.svg"/>
+            </div>
+            <div class="mid-sec">
+        
+            <input class="search-bar" placeholder="Search" type="text"> 
+            <button class="sb">
+                <img class="search-button" src="channels/search.svg"/>
+                </button>
+                <button class="m">
+                <img class="mike" src="channels/voice-search-icon.svg"/>
+            </button>
+        </div>
+        <div class="right-sec">
+            
+                <img class="ri" src="channels/upload.svg"/>
+            
+            
+                <img class="ri" src="channels/youtube-apps.svg"/>
+            
+            
+                <img class="noti" src="channels/notifications.svg"/>
+                <div class="nn">
+                    3
+                          
+                </div>
+
+            
+            
+                <img class="propic" src="channels/my-channel.jpeg"/>
+            
+        </div>
+        </div>
+        <div class="everything" >
+        <div class="vd">
+            <div class="tb">
+                <a href="https://youtu.be/n2RNcPRtAiY?si=OIdfJ03qsoftghrv">       
+            <IMG  class="thumbnail" SRC="thumbnails\thumbnail-1.webp"/>
+            </a>
+            
+            
+            <div class="vt">
+                14:20
+            </div>
+            </div>
+            <div class="vdg">
+            <div class="channel">
+                
+                <img class="pp" src="channels\channel-1.jpeg"/>
+                
+            </div>
+            <div class="vi">
+            <p class="title"></b>Talking Tech and AI with Google CEO Sundar Pichai!</p>
+
+                <p class="youber">Marques Brownlee</p>
+                
+                <p class="views">3.4M views · 6 months ago</p>
+            </div>
+            </div>
+            
+       </div>
+       <div class="vd">
+        <div class="tb">
+            <a href="https://youtu.be/mP0RAo9SKZk?si=1Z403gPe1aVWCw-G">
+        <IMG  class="thumbnail" SRC="thumbnails\thumbnail-2.webp"/>
+        </a>
+        <div class="vt">
+            8:22
+        </div>
+        </div>
+        <div class="vdg">
+        <div class="channel">
+            <img class="pp" src="channels\channel-2.jpeg"/>
+        </div>
+        <div class="vi">
+        <p class="title"></b>
+            Try Not To Laugh Challenge #9
+            
+            </p>
+
+            <p class="youber">
+                
+                Markiplier
+                
+                </p>
+            
+            <p class="views">19M views · 4 years ago</p>
+        </div>
+        </div>
+   </div>
+
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/FgjPQQeTh1w?si=ny06sDMAKjyl3tuJ">
+        <img class="thumbnail" src="thumbnails\thumbnail-3.webp"/>
+        </a>
+        <div class="vt">
+            9:13
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-3.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            
+            Crazy Tik Toks Taken Moments Before DISASTER
+
+
+        </p>
+        <p class="youber">
+            SSSniperWolf
+
+
+        </p>
+        <p class="views">
+            12M views · 1 year ago
+        </p>
+        </div>
+        </div>
+    </div>
+
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/094y1Z2wpJg?si=rlV_IFDzUYZzwnEv">
+        <img class="thumbnail" src="thumbnails\thumbnail-4.webp"/>
+        </a>
+        <div class="vt">
+            22:09
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-4.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            
+    The Simplest Math Problem No One Can Solve - Collatz Conjecture
+
+
+        </p>
+        <p class="youber">
+            Veritasium
+
+
+        </p>
+        <p class="views">
+            18M views · 4 months ago
+        </p>
+    </div>
+    </div>
+</div>
+
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/86CQq3pKSUw?si=QXjVnstGecKxZEL5">
+        <img class="thumbnail" src="thumbnails\thumbnail-5.webp"/>
+        </a>
+        <div class="vt">
+            11:17
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-5.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            
+    
+Kadane's Algorithm to Maximum Sum Subarray Problem
+
+
+
+
+        </p>
+        <p class="youber">
+            CS Dojo
+
+           
+
+
+        </p>
+        <p class="views">
+            519K views · 5 years ago
+        </p>
+    </div>
+    </div>
+</div>
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/yXWw0_UfSFg?si=sCIwPVjsY19gSVPc">
+           
+        <img class="thumbnail" src="thumbnails\thumbnail-6.webp"/>
+        </a>
+        <div class="vt">
+            19:59
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-6.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            
+    
+
+            Anything You Can Fit In The Circle I’ll Pay For
+
+            
+
+
+
+
+        </p>
+        <p class="youber">
+            MrBeast
+            
+           
+           
+
+
+        </p>
+        <p class="views">
+            141M views · 1 year ago
+
+        </p>
+    </div>
+    </div>
+</div>
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/fNVa1qMbF9Y?si=m4tmbDsggCCiJJF5">
+        <img class="thumbnail" src="thumbnails\thumbnail-7.webp"/>
+        </a>
+        <div class="vt">
+            10:13
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-7.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            Why Planes Don't Fly Over Tibet
+        </p>
+        <p class="youber">
+        
+            RealLifeLore
+
+        </p>
+        <p class="views">
+             6.6M views · 1 year ago
+
+        </p>
+    </div>
+    </div>
+
+</div>
+
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/lFm4EM1juls?si=hWP__UDygMhXOiKJ">
+        <img class="thumbnail" src="thumbnails\thumbnail-8.webp"/>
+        </a>
+        <div class="vt">
+            7:12
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-8.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            Inside The World's Biggest Passenger Plane
+        </p>
+        <p class="youber">
+
+            Tech Vision
+        </p>
+        <p class="views">
+            3.7M views · 10 months ago
+
+        </p>
+    </div>
+    </div>
+</div>
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/ixmxOlcrlUc?si=8c8uHTbHzEO3D6Wy">
+        <img class="thumbnail" src="thumbnails\thumbnail-9.webp"/>
+        </a>
+        <div class="vt">
+            13:17
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-9.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            
+        The SECRET to Super Human STRENGTH
+
+
+        </p>
+        <p class="youber">
+            ThenX
+
+
+        </p>
+        <p class="views">
+            20M views · 3 year ago
+
+        </p>
+    </div>
+    </div>
+
+</div>
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/R2vXbFp5C9o?si=ctPiyZe-bZeirFSp">
+        <img class="thumbnail" src="thumbnails\thumbnail-10.webp"/>
+        </a>
+        <div class="vt">
+            7:53
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-10.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            
+            How The World's Largest Cruise Ship Makes 30,000 Meals Every Day
+
+        </p>
+        <p class="youber">
+           
+
+            Business Insider
+
+        </p>
+        <p class="views">
+            
+            14M views · 1 year ago
+
+        </p>
+    </div>
+    </div>
+</div>
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/0nZuYyXET3s?si=e-_OMSfaUwkEiTWp">
+        <img class="thumbnail" src="thumbnails\thumbnail-11.webp"/>
+        </a>
+        <div class="vt">
+            4:10
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-11.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+            Dubai's Crazy Underwater Train and Other Things #Only in Dubai
+
+        </p>
+        <p class="youber">
+           
+            Destination Tips
+
+        </p>
+        <p class="views">
+            
+            3M views · 1 year ago
+        </p>
+    </div>
+    </div>
+</div>
+<div class="vd">
+    <div class="tb">
+        <a href="https://youtu.be/9iMGFqMmUFs?si=asph4gNy7IvjH-zU">
+
+        
+        <img class="thumbnail" src="thumbnails\thumbnail-12.webp"/>
+    </a>
+        <div class="vt">
+            4:51
+        </div>
+    </div>
+    <div class="vdg">
+    <div class="channel">
+        <img class="pp" src="channels\channel-12.jpeg"/>
+    </div>
+    <div class="vi">
+        <p class="title">
+           
+            What would happen if you didn’t drink water? - Mia Nacamulli
+
+        </p>
+        <p class="youber">
+           
+            
+            TED-Ed
+
+
+        </p>
+        <p class="views">
+            
+            
+            12M views · 5 years ago
+        </p>
+    </div>
+    </div>
+</div>
+
+            
+        
+        
+            
+    </body>
+</html>
